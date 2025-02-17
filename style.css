@@ -27,38 +27,51 @@ body.dark-mode {
 header {
     background: linear-gradient(135deg, #ff6b81, #ff4757);
     color: white;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
     position: relative;
 }
 
+/* Logo - Align to Left */
 .logo {
     width: 80px;
+    margin-right: auto;
 }
 
+/* Heading */
 h1 {
-    font-size: 28px;
-    margin: 10px 0;
+    font-size: 26px;
+    flex-grow: 1;
+    text-align: center;
 }
 
-p {
-    font-size: 16px;
-}
-
+/* Dark Mode Button - Align to Right */
 #theme-toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    background: #ffffff55;
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
     cursor: pointer;
+    color: white;
+    transition: 0.3s;
 }
 
-body.dark-mode #theme-toggle {
-    background: #ffffff33;
+#theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode #theme-toggle {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Banner */
@@ -140,8 +153,22 @@ footer {
 
 /* Mobile Responsive */
 @media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
     h1 {
         font-size: 22px;
+        margin-top: 10px;
+    }
+
+    #theme-toggle {
+        margin-top: 10px;
     }
 
     .facility {
