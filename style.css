@@ -1,0 +1,150 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Light Mode */
+body {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    color: white;
+    padding: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+#theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #ffffff55;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+body.dark-mode #theme-toggle {
+    background: #ffffff33;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Sections */
+.about, .facilities, .contact {
+    padding: 20px;
+    background: white;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .about, .dark-mode .facilities, .dark-mode .contact {
+    background: #333;
+}
+
+/* Facilities */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.facility {
+    background: #ff4757;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input, textarea, button {
+    padding: 12px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background: #ff4757;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .facility {
+        font-size: 14px;
+    }
+}
